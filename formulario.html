@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+</head>
+
+<body>
+    <h1>Contacto Gijón / Universidad Laboral</h1>
+    <form action="tratar-datos.html" method="get">
+            <fieldset class="completa">
+                    <p><strong>Complete el siguiente formulario para poder resolver sus dudas</strong></p>
+                    <fieldset>
+                        <legend>Informacion Personal</legend>
+                        <label for="Nombre">Nombre</label>
+                        <input type="text" name="text" id="Nombre" placeholder="Alex" size="20">
+                        <br />
+                        <br />
+                        <label for="Apellidos">Apellidos</label>
+                        <input type="text" name="text" id="Apellidos" placeholder="Luis Rey" size="20">
+                        <br />
+                        <br />
+                        <label for="Telefono">Nº de Telefono</label>
+                        <input type="tel" name="number" id="Nº de Telefono" placeholder="671412836" maxlength="9">
+                        <br />
+                        <br />
+                        <label for="email">Correo electronico</label>
+                        <input type="email" id="email" name="email" placeholder="contacto@gmail.com" size="20" maxlength="40" />
+                        <br />
+                        <br />
+                        <textarea rows="5" cols="40" name="observaciones" placeholder="Escriba aqui sus dudas..."></textarea>
+                        <br />
+                        <input type="checkbox" id="publi" value="si" checked="checked">
+                        <label for="publi">Acepto la politica de privacidad  </label>
+                    </fieldset>
+                    <br />
+                    <fieldset>
+                        <legend>¿Como desea que nos pongamos en contacto para resolver sus dudas?</legend>
+                        <input type="radio" name="tipo" id="Telefono">
+                        <label for="Telefono">Llamada Telefonica</label>
+                        <br />
+                        <input type="radio" name="tipo" id="empresa">
+                        <label for="empresa">Correo Electronico</label>
+                        <br />
+                    </fieldset>
+                    <br />
+                    <input type="submit" value="Enviar" />
+
+                    <input type="reset" value="Borrar" />
+
+            </fieldset>
+        </form>
+</body>
+</html>
