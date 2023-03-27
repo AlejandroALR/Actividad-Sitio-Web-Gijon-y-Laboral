@@ -15,22 +15,23 @@ function recoge($var, $m = "")
     return $tmp;
 }
 
-$nombre      = recoge("nombre");
-$apellidos   = recoge("apellidos");
+$nombre        = recoge("nombre");
+$apellidos     = recoge("apellidos");
 $numero        = recoge("numero");
-$email        = recoge("email");
-$dudas        = recoge("dudas");
-$privacidad = recoge("privacidad");
+$email         = recoge("email");
+$dudas         = recoge("dudas");
+$privacidad    = recoge("privacidad");
 $contacto      = recoge("contacto");
+$mensajes      = array();
 
 
-$nombreOk      = false;
-$apellidosOk   = false;
-$numeroOk        = false;
+$nombreOk       = false;
+$apellidosOk    = false;
+$numeroOk       = false;
 $emailOk        = false;
 $dudasOk        = false;
-$privacidadOk = false;
-$contactoOk        = false;
+$privacidadOk   = false;
+$contactoOk     = false;
 
 
 if ($nombre == "") {
@@ -47,39 +48,30 @@ if ($apellidos == "") {
     $apellidosOk = true;
 }
 
-if ($numero == "...") {
+if ($numero == "") {
     print "  <p class=\"aviso\">No ha indicado su Numero de telefono.</p>\n";
     print "\n";
 } else {
     $numeroOk = true;
 }
 
-if ($email == "...") {
+if ($email == "") {
     print "  <p class=\"aviso\">No ha indicado su Email.</p>\n";
+    print "\n";
+} elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    print "  <p class=\"aviso\">No ha escrito una dirección de correo correcta.</p>\n";
     print "\n";
 } else {
     $emailOk = true;
 }
 
-//Aqui iria el textarea de Dudas
-
-
-if ($privacidad == "") {
-    print " <p>No acepta las politicas de privacidad.</p>\n";
-} elseif ($privacidadOk) {
-    print " <p>Acepta las politicas de privacidad.</p>\n";
+if(isset($_POST['dudas']) ){
+    $mensajes[] = "Las dudas son [".$_POST['dudas']."]";
 }
 
 
-if ($contacto == "telefono") {
-    print "  <p>Quiere que le contactemos por llamada telefonica.</p>\n";
-} else {
-    print "  <p>Quiere que le contactemos via correo electronico.</p>\n";
-}
-print "\n";
 
-
-if ($nombreOk && $apellidosOk && $numeroOk && $emailOk && $dudasOk && $privacidadOk && $contactoOk) {
+if ($nombreOk && $apellidosOk && $numeroOk && $emailOk) {
     
     print "  <p>Su nombre es <strong>$nombre</strong>.</p>\n";
     print "\n";
@@ -89,23 +81,10 @@ if ($nombreOk && $apellidosOk && $numeroOk && $emailOk && $dudasOk && $privacida
     print "\n";
     print "  <p>Su correo electronico es <strong>$email</strong>.</p>\n";
     print "\n";
-
-// Aqui iria el textarea de Dudas
-
-
-    if ($privacidad == "") {
-        print " <p>No acepta las politicas de privacidad.</p>\n";
-    } elseif ($privacidadOk) {
-        print " <p>Acepta las politicas de privacidad.</p>\n";
-    }
+    print "  <p>Sus dudas son <strong>$dudas</strong>.</p>\n";
     print "\n";
 
-    if ($contacto == "telefono") {
-        print "  <p>Quiere que le contactemos por llamada telefonica.</p>\n";
-    } else {
-        print "  <p>Quiere que le contactemos via correo electronico.</p>\n";
-    }
-    print "\n";
+
 
 }
 ?>
