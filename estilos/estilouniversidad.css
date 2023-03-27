@@ -30,6 +30,7 @@ nav li:hover {
 
 
 
+
 /* Pagina Principal */
 
 h1 {
@@ -56,7 +57,9 @@ h2 {
 }
 
 body {
+
     background-color: whitesmoke;
+    
 }
 
 p{
@@ -74,9 +77,15 @@ p{
 }
 
 img {
-    width: 400px;
+    width: 30%;
     float: right;
     border: 5px solid red;
+    align-items: right;
+}
+
+.home {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .footer {
@@ -93,7 +102,6 @@ img {
 
     text-align: center;
  }
-
 
 
 

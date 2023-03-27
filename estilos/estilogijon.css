@@ -59,7 +59,9 @@ h2 {
 }
 
 body {
+
     background-color: whitesmoke;
+
 }
 
 p{
@@ -77,9 +79,10 @@ p{
 }
 
 img {
-    width: 400px;
+    width: 30%;
     float: right;
     border: 5px solid red;
+    align-items: right;
 }
 
 .home {
@@ -98,7 +101,7 @@ img {
 
 /* Tabla Tiempo */
 table {
-
+    
     margin: 0 auto;
 }
 

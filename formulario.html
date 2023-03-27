@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="estilos/estilogijon.css">
     <link rel="icon" type="image/x-icon" href="imagenes/favicon.png">
-    <title>formulario</title>
+    <title>Contacto</title>
 </head>
 
 <body>
@@ -21,40 +21,40 @@
     </nav>
 
     <h1>Contacto Gijón / Universidad Laboral</h1>
-    <form action="tratar-datos.html" method="get">
+    <form action="formulario.php" method="get">
             <fieldset class="completa">
                     <p><strong>Complete el siguiente formulario para poder resolver sus dudas</strong></p>
                     <fieldset>
                         <legend>Informacion Personal</legend>
                         <label for="Nombre">Nombre</label>
-                        <input type="text" name="text" id="Nombre" placeholder="Alex" size="20">
+                        <input type="text" name="nombre" id="Nombre" placeholder="Alex" size="20">
                         <br />
                         <br />
                         <label for="Apellidos">Apellidos</label>
-                        <input type="text" name="text" id="Apellidos" placeholder="Luis Rey" size="20">
+                        <input type="text" name="apellidos" id="Apellidos" placeholder="Luis Rey" size="20">
                         <br />
                         <br />
                         <label for="Telefono">Nº de Telefono</label>
-                        <input type="tel" name="number" id="Nº de Telefono" placeholder="671412836" maxlength="9">
+                        <input type="tel" name="numero" id="Nº de Telefono" placeholder="671412836" maxlength="9">
                         <br />
                         <br />
                         <label for="email">Correo electronico</label>
                         <input type="email" id="email" name="email" placeholder="contacto@gmail.com" size="20" maxlength="40" />
                         <br />
                         <br />
-                        <textarea rows="5" cols="40" name="observaciones" placeholder="Escriba aqui sus dudas..."></textarea>
+                        <textarea rows="5" cols="40" name="dudas" placeholder="Escriba aqui sus dudas..."></textarea>
                         <br />
-                        <input type="checkbox" id="publi" value="si" checked="checked">
+                        <input type="checkbox" id="privacidad" value="si" checked="checked">
                         <label for="publi">Acepto la politica de privacidad  </label>
                     </fieldset>
                     <br />
                     <fieldset>
                         <legend>¿Como desea que nos pongamos en contacto para resolver sus dudas?</legend>
-                        <input type="radio" name="tipo" id="Telefono">
+                        <input type="radio" name="contacto" id="telefono">
                         <label for="Telefono">Llamada Telefonica</label>
                         <br />
-                        <input type="radio" name="tipo" id="empresa">
-                        <label for="empresa">Correo Electronico</label>
+                        <input type="radio" name="contacto" id="email">
+                        <label for="email">Correo Electronico</label>
                         <br />
                     </fieldset>
                     <br />
@@ -67,7 +67,7 @@
 
         <div class="footer">
             <p>Alejandro Luis Rey - Contacto Gijon / Universidad Laboral - DAW 2022/2023</p>
-          </div>
+        </div>
     
 </body>
 </html>
